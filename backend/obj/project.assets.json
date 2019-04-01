@@ -12437,11 +12437,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Matthew Dodi\\Documents\\All Projects\\Fumble\\Fumble.csproj",
+      "projectUniqueName": "C:\\Users\\Matthew Dodi\\Documents\\All Projects\\Fumble\\backend\\Fumble.csproj",
       "projectName": "Fumble",
-      "projectPath": "c:\\Users\\Matthew Dodi\\Documents\\All Projects\\Fumble\\Fumble.csproj",
+      "projectPath": "C:\\Users\\Matthew Dodi\\Documents\\All Projects\\Fumble\\backend\\Fumble.csproj",
       "packagesPath": "C:\\Users\\Matthew Dodi\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Matthew Dodi\\Documents\\All Projects\\Fumble\\obj\\",
+      "outputPath": "C:\\Users\\Matthew Dodi\\Documents\\All Projects\\Fumble\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
