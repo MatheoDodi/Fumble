@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Fumble.Data;
 using Fumble.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fumble.Controllers
 {
@@ -24,18 +25,24 @@ namespace Fumble.Controllers
     [HttpGet]
     public IActionResult GetValues()
     {
-      var values = _context.Values.ToList();
+      var values = _context.Values.ToListAsync();
 
       return Ok(values);
     }
 
     // GET api/values/5
     [HttpGet("{id:int}")]
-    public IActionResult GetValue(int id)
+    public async Task<IActionResult> GetValue(int id)
     {
-      var value = _context.Values.FirstOrDefault(x => x.Id == id);
+      var value = await _context.Values.FirstOrDefaultAsync(x => x.Id == id);
+
+      if (value == null)
+      {
+        return NotFound();
+      }
 
       return Ok(value);
+
     }
 
     // POST api/values
