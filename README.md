@@ -47,7 +47,7 @@ Contributions are what make the open source community such an amazing place to b
 
 Matthew Dodi - [in/MatthewDodi](https://linkedin.com/in/MatthewDodi) - matthew.dodi@gmail.com
 
-Project Link: [https://github.com/MatthewDodi/RESTful-.NET-Core.git](https://github.com/MatthewDodi/RESTful-.NET-Core.git)
+Project Link: [https://github.com/MatthewDodi/Fumble.git](https://github.com/MatthewDodi/Fumble.git)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
