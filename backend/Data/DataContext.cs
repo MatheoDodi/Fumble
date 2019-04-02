@@ -1,3 +1,4 @@
+using backend.Models;
 using Fumble.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,5 +12,7 @@ namespace Fumble.Data
     }
 
     public DbSet<Value> Values { get; set; }
+
+    public DbSet<User> Users { get; set; }
   }
 }
