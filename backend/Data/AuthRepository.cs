@@ -18,7 +18,7 @@ namespace backend.Data
     {
       var user = await _context.Users.FirstOrDefaultAsync(x => x.Username == username);
 
-      if (username == null)
+      if (username == null || user == null)
         return null;
 
       if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))

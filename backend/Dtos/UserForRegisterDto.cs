@@ -7,7 +7,7 @@ namespace backend.Dtos
     [Required]
     public string Username { get; set; }
     [Required]
-    [StringLength(20, MinimumLength = 6, ErrorMessage = "You must specify a password of at least 6 characters")
+    [StringLength(20, MinimumLength = 6, ErrorMessage = "You must specify a password of at least 6 characters")]
     public string Password { get; set; }
   }
 }
