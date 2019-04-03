@@ -28,6 +28,8 @@ Building a dating web app with .NET Core Web API and Angular.
 
 - [.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.2)
 - [Entity Framework](https://docs.microsoft.com/en-us/ef/ef6/)
+- [Angular](https://angular.io/docs)
+- [JSON Web Tokens](https://jwt.io/introduction/)
 
 <!-- CONTRIBUTING -->
 
