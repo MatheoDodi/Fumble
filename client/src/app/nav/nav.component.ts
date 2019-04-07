@@ -9,18 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   model: any = {};
+  loggedIn: Boolean = false;
+  username: String = '';
 
   constructor(
     private authService: AuthService,
     private alertify: AlertifyService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const username = this.authService.loggedIn();
+    if (username) {
+      this.loggedIn = true;
+      this.username = username;
+    }
+  }
 
   login() {
     this.authService.login(this.model).subscribe(
       next => {
         this.alertify.success('Logged in successfully');
+        this.loggedIn = true;
       },
       error => {
         this.alertify.error(error);
@@ -28,13 +37,8 @@ export class NavComponent implements OnInit {
     );
   }
 
-  loggedIn() {
-    const token = localStorage.getItem('token');
-    // shorthand for token ? true : false;
-    return !!token;
-  }
-
   logout() {
+    this.loggedIn = false;
     localStorage.removeItem('token');
     this.alertify.message('Logged out');
   }
