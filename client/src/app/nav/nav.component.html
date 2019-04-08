@@ -1,10 +1,8 @@
-<nav
-  class="navbar navbar-expand-md navbar-dark bg-dark __web-inspector-hide-shortcut__"
->
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">Fumble</a>
 
-    <ul class="navbar-nav mr-auto">
+    <ul *ngIf="loggedIn" class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Matches</a>
       </li>

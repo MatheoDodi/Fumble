@@ -1,14 +1,16 @@
 <div class="container mt-5">
   <div *ngIf="!registerMode" style="text-align: center;">
-    <h1>Find your match</h1>
-    <p class="lead">
+    <h1 class="text-light">Find your match</h1>
+    <p class="lead text-white">
       Come on in to view your matches... All you need to do is sign up!
     </p>
     <div class="text-center mt-5">
       <button class="btn btn-primary mr-3 btn-lg" (click)="registerToggle()">
         Register
       </button>
-      <button class="btn btn-info btn-lg">Learn More</button>
+      <button class="btn btn-outline-secondary btn-lg text-white">
+        Learn More
+      </button>
     </div>
   </div>
 

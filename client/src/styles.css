@@ -4,3 +4,13 @@
 @import '../node_modules/font-awesome//css/font-awesome.min.css';
 @import '../node_modules//alertifyjs//build/css/alertify.min.css';
 @import '../node_modules//alertifyjs//build//css/themes//bootstrap.min.css';
+@import '../node_modules/bootswatch/dist/litera/bootstrap.min.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: calc(100vh - 55px);
+}
