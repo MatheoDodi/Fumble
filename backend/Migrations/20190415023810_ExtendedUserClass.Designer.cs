@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fumble.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190415022843_ExtendedUserClass")]
+    [Migration("20190415023810_ExtendedUserClass")]
     partial class ExtendedUserClass
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,7 +41,7 @@ namespace Fumble.Migrations
 
                     b.Property<string>("Url");
 
-                    b.Property<int?>("UserId");
+                    b.Property<int>("UserId");
 
                     b.Property<bool>("isMain");
 
@@ -88,9 +88,10 @@ namespace Fumble.Migrations
 
             modelBuilder.Entity("backend.Models.Photo", b =>
                 {
-                    b.HasOne("backend.Models.User")
+                    b.HasOne("backend.Models.User", "User")
                         .WithMany("Photos")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

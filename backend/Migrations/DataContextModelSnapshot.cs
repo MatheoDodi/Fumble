@@ -39,7 +39,7 @@ namespace Fumble.Migrations
 
                     b.Property<string>("Url");
 
-                    b.Property<int?>("UserId");
+                    b.Property<int>("UserId");
 
                     b.Property<bool>("isMain");
 
@@ -86,9 +86,10 @@ namespace Fumble.Migrations
 
             modelBuilder.Entity("backend.Models.Photo", b =>
                 {
-                    b.HasOne("backend.Models.User")
+                    b.HasOne("backend.Models.User", "User")
                         .WithMany("Photos")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
