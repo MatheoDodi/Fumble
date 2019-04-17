@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using backend.Data;
 using backend.helpers;
 using Fumble.Data;
@@ -42,6 +43,7 @@ namespace Fumble
           opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         });
       services.AddCors();
+      services.AddAutoMapper();
       services.AddTransient<Seed>();
       services.AddScoped<IAuthRepository, AuthRepository>();
       services.AddScoped<IDatingRepository, DatingRepository>();
