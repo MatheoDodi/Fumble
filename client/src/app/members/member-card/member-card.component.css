@@ -33,10 +33,13 @@
   margin-right: auto;
   margin-left: auto;
   opacity: 0;
-  transition: all 0.2;
 }
 
 .card-img-wrapper:hover .member-icons {
   bottom: 0;
   opacity: 1;
+}
+
+.animate {
+  transition: all 0.2s ease-in-out;
 }
