@@ -44,4 +44,13 @@ export class AuthService {
       return unique_name;
     }
   }
+
+  getUserId() {
+    const token = this.getTokenFromLocalStorage();
+
+    if (token) {
+      const { nameid } = this.jwtHelper.decodeToken(token);
+      return nameid;
+    }
+  }
 }
