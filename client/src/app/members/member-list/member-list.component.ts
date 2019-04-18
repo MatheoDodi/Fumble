@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { AlertifyService } from '../../_services/alertify.service';
 import { UserService } from '../../_services/user.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,11 +14,14 @@ export class MemberListComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private alertify: AlertifyService
+    private alertify: AlertifyService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.loadUsers();
+    this.route.data.subscribe(data => {
+      this.users = data['users'];
+    });
   }
 
   loadUsers() {

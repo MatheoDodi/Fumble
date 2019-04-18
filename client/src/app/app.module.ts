@@ -1,3 +1,4 @@
+import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
@@ -61,7 +62,8 @@ export function tokenGetter() {
       AlertifyService,
       AuthGuard,
       UserService,
-      MemberDetailResolver
+      MemberDetailResolver,
+      MemberListResolver
    ],
    bootstrap: [
       AppComponent
