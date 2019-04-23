@@ -88,7 +88,7 @@ namespace Fumble
 
       //Adding CORS
       // seeder.SeedUsers();
-      app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader());
+      app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
       //Adding Authentication
       app.UseAuthentication();
