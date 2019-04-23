@@ -30,6 +30,7 @@ namespace backend.helpers
       });
 
       CreateMap<Photo, PhotosForDetailedDto>();
+      CreateMap<UserForUpdateDto, User>();
     }
   }
 }
