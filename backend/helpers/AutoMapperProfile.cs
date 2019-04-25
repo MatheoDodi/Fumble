@@ -31,6 +31,8 @@ namespace backend.helpers
 
       CreateMap<Photo, PhotosForDetailedDto>();
       CreateMap<UserForUpdateDto, User>();
+      CreateMap<Photo, PhotoForReturnDto>();
+      CreateMap<Photo, PhotoForCreationDto>();
     }
   }
 }
