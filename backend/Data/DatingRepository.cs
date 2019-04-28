@@ -26,7 +26,7 @@ namespace backend.Data
 
     public async Task<Photo> getPhoto(int id)
     {
-      var photo = await _context.Photos.FirstOrDefaultAsync(p => p.Id = id);
+      var photo = await _context.Photos.FirstOrDefaultAsync(p => p.Id == id);
 
       return photo;
     }

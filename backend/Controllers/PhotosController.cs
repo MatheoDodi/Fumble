@@ -16,6 +16,7 @@ namespace backend.Controllers
 {
   [Authorize]
   [Route("api/users/{userId}/photos")]
+  [ApiController]
   public class PhotosController : ControllerBase
   {
     private readonly IMapper _mapper;
@@ -50,7 +51,7 @@ namespace backend.Controllers
 
 
     [HttpPost]
-    public async Task<IActionResult> AddPhotoForUser(int userId, PhotoForCreationDto photoForCreationDto)
+    public async Task<IActionResult> AddPhotoForUser(int userId, [FromForm]PhotoForCreationDto photoForCreationDto)
     {
       if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
       {
